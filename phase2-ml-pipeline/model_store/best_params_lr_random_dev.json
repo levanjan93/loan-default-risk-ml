@@ -1,0 +1,6 @@
+{
+  "logistic_regression": {
+    "C": 0.01,
+    "penalty": "l2"
+  }
+}

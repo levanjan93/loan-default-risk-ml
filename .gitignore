@@ -1,0 +1,39 @@
+# Secrets
+.env
+.env.*
+*.pem
+*credentials*
+*secret*
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Generated ML / datamart artefacts (reproducible from pipeline)
+**/datamart/gold/**/*
+!**/datamart/gold/.gitkeep
+**/model_store/*
+!**/model_store/.gitkeep
+!**/model_store/*.json
+**/outputs/charts/*
+!**/outputs/charts/.gitkeep
+!**/outputs/charts/monitoring_summary.json
+!**/outputs/charts/*.png
+
+# Docker / Airflow local state
+airflow_data/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.Trash-0/
+
+# Accidental macOS zip metadata
+**/__MACOSX/
+
+# Logs and course submission-only files
+*.log
+Assignment*.pdf

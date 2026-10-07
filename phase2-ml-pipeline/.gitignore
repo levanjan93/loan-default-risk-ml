@@ -1,0 +1,23 @@
+# Generated artefacts (keep folder structure via .gitkeep)
+datamart/gold/**/*
+!datamart/gold/.gitkeep
+model_store/*
+!model_store/.gitkeep
+!model_store/*.json
+outputs/charts/*
+!outputs/charts/.gitkeep
+!outputs/charts/monitoring_summary.json
+!outputs/charts/*.png
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Docker
+airflow_data/
+
+# OS
+.DS_Store
+Thumbs.db

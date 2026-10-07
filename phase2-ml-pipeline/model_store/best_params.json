@@ -1,0 +1,12 @@
+{
+  "lightgbm": {
+    "subsample": 0.7,
+    "reg_lambda": 5.0,
+    "num_leaves": 63,
+    "n_estimators": 200,
+    "min_child_samples": 50,
+    "max_depth": 3,
+    "learning_rate": 0.05,
+    "colsample_bytree": 0.7
+  }
+}

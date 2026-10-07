@@ -1,0 +1,9 @@
+# Optional tooling for the research notebooks only.
+# Install locally with:  pip install -r requirements-dev.txt
+-r requirements.txt
+
+jupyterlab==4.2.5
+ipykernel==6.29.5
+xgboost==2.1.1      # optional challenger in notebooks/02_model_tuning.ipynb (5b)
+optuna==3.6.1       # optional Bayesian search in notebooks/02_model_tuning.ipynb (5b)
+shap==0.46.0        # optional local explanations in notebooks/02_model_tuning.ipynb (8)
