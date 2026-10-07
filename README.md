@@ -1,6 +1,6 @@
 # Loan Default Risk — End-to-End ML Platform
 
-Portfolio project from **SMU MITB CS611 (Machine Learning Engineering)**: predict **probability of default at loan application** (30+ DPD at month-on-book 6) for a cash-loan portfolio, from raw operational data through a governed production pipeline.
+End-to-end **machine learning engineering** portfolio project: predict **probability of default at loan application** (30+ DPD at month-on-book 6) for a cash-loan portfolio, from raw operational data through a governed production pipeline.
 
 **Target:** `default_flag` at application time · **Champion model:** calibrated LightGBM (36 SHAP-selected features) · **OOT ROC-AUC:** ~0.81 · **Gini:** ~0.61
 
@@ -8,7 +8,7 @@ Portfolio project from **SMU MITB CS611 (Machine Learning Engineering)**: predic
 
 ## What this repo contains
 
-This is a **two-phase monorepo** — Assignment 1 (feature engineering) and Assignment 2 (ML ops) as one coherent story:
+This is a **two-phase monorepo** — feature engineering (Phase 1) and production ML ops (Phase 2) as one coherent story:
 
 | Phase | Folder | Focus |
 |-------|--------|--------|
@@ -103,8 +103,8 @@ python main.py --snapshotdate 2024-07-01 --training
 loan-default-risk-ml/
 ├── README.md                 ← you are here
 ├── docs/architecture.md
-├── phase1-feature-store/     Assignment 1 — medallion + training table
-└── phase2-ml-pipeline/       Assignment 2 — Airflow DAG, train/infer/monitor
+├── phase1-feature-store/     Phase 1 — medallion + training table
+└── phase2-ml-pipeline/       Phase 2 — Airflow DAG, train/infer/monitor
 ```
 
 Feature definitions: [`phase2-ml-pipeline/FEATURE_CATALOG.md`](phase2-ml-pipeline/FEATURE_CATALOG.md)
@@ -128,6 +128,6 @@ Production monitoring example (Jul 2024 snapshot): ROC-AUC **0.86**, Gini **0.71
 
 ## Context & license
 
-Developed as coursework at **Singapore Management University, MITB — CS611**. Synthetic / course-provided data only; not production financial advice. See [`docs/DATA.md`](docs/DATA.md) and [`SECURITY.md`](SECURITY.md).
+Built with **synthetic sample data** for demonstration only — not production financial advice. See [`docs/DATA.md`](docs/DATA.md) and [`SECURITY.md`](SECURITY.md).
 
 MIT License — see [`LICENSE`](LICENSE).

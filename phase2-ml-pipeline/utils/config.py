@@ -1,4 +1,4 @@
-"""Shared paths and constants for the Assignment 2 ML pipeline."""
+"""Shared paths and constants for the production ML pipeline."""
 
 import os
 from pathlib import Path
@@ -8,7 +8,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
 def _datamart_path(path: Path) -> str:
-    """Assignment 1 modules concatenate filenames; require trailing separator."""
+    """Datamart modules concatenate filenames; require trailing separator."""
     return os.path.join(str(path), "")
 
 
@@ -21,7 +21,7 @@ BRONZE_DIR = DATAMART_DIR / "bronze"
 SILVER_DIR = DATAMART_DIR / "silver"
 GOLD_DIR = DATAMART_DIR / "gold"
 
-# Assignment 1 medallion layout (string paths for PySpark modules)
+# Medallion layout (string paths for PySpark modules)
 BRONZE_DIRS = {
     "lms": _datamart_path(BRONZE_DIR / "lms"),
     "clickstream": _datamart_path(BRONZE_DIR / "clickstream"),
@@ -54,7 +54,7 @@ RAW_FILES = {
     "loans": DATA_DIR / "lms_loan_daily.csv",
 }
 
-# Business rules from Assignment 1 datamart
+# Business rules from the datamart / label definition
 DEFAULT_MOB_INSTALLMENT = 6
 DEFAULT_DPD_THRESHOLD_DAYS = 30
 CLICKSTREAM_WINDOW_DAYS = 30

@@ -1,4 +1,4 @@
-"""Run Assignment 1 medallion pipeline for a single monthly snapshot."""
+"""Run medallion pipeline for a single monthly snapshot."""
 
 from __future__ import annotations
 

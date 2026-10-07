@@ -1,6 +1,6 @@
 # Gold Layer Feature Catalog
 
-This document describes every model-ready feature produced by the Assignment 2 medallion pipeline (`g1_*` → `g2_feature_store` → `g2_training_table`).
+This document describes every model-ready feature produced by the medallion pipeline (`g1_*` → `g2_feature_store` → `g2_training_table`).
 
 **Total model features (intended): 93** — prefixed as they appear in `g2_training_table` / `g2_feature_store`.
 

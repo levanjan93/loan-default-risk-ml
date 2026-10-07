@@ -1,4 +1,4 @@
-"""Load and prepare modeling datasets from Assignment 1 gold tables."""
+"""Load and prepare modeling datasets from gold training tables."""
 
 from __future__ import annotations
 

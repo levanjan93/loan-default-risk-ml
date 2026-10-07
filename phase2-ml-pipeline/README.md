@@ -86,7 +86,7 @@ start
 
 ### Backfill (UI or CLI)
 
-Assignment requires the pipeline to be **backfillable** across time; it does not require auto-catchup on startup.
+The pipeline is **backfillable** across time; catchup is disabled on startup so history is not auto-queued (use manual trigger or backfill).
 
 **UI:** DAG → **Backfill** → choose start/end (e.g. `2024-05-01` to `2024-06-01`)
 
@@ -122,7 +122,7 @@ python -c "import pandas as pd; print(pd.read_parquet('datamart/gold/predictions
 
 ## What the pipeline does
 
-1. **Datamart (medallion)** — Assignment 1 bronze → silver → gold; point-in-time `g2_feature_store` and labelled `g2_training_table`. Feature definitions: `FEATURE_CATALOG.md`.
+1. **Datamart (medallion)** — Phase 1 bronze → silver → gold; point-in-time `g2_feature_store` and labelled `g2_training_table`. Feature definitions: `FEATURE_CATALOG.md`.
 2. **Train & select** — `utils/ml/train.py` loads tuned params from `model_store/best_params.json` and the promoted 36-feature LightGBM champion from `model_store/champion_config.json`; calibrates scores to true PD; persists to `model_store/`.
 3. **Inference** — `utils/ml/inference.py` writes monthly partitions under `datamart/gold/predictions/`.
 4. **Monitoring** — `utils/ml/monitor.py` writes `datamart/gold/monitoring/` and renders deck charts to `outputs/charts/` (AUC/Gini/KS/Brier, actual vs predicted default rate, score & feature PSI, approval rate, bad-rate among approved).

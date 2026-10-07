@@ -1,6 +1,6 @@
 # Data notice
 
-All datasets in this repository are **synthetic, course-provided samples** for education and portfolio demonstration. They are **not** real customer records and must not be used for production credit decisions.
+All datasets in this repository are **synthetic samples** for education and portfolio demonstration. They are **not** real customer records and must not be used for production credit decisions.
 
 | Field types in raw CSVs | Handling |
 |-------------------------|----------|
