@@ -10,7 +10,7 @@
 - **Headline:** *Predicting loan default at the point of application — an end-to-end, monitored ML pipeline.*
 - **Content:**
   - Context: a cash-loan lender; decide **approve / decline / price** before disbursing.
-  - Target: **`30 DPD @ MOB 6`** — 30+ days past due by the 6th month on book (the bank's realised-default definition from A1).
+  - Target: **`30 DPD @ MOB 6`** — 30+ days past due by the 6th month on book (realised-default definition from the datamart label store).
   - One line on scope: medallion datamart → train → score → monitor, orchestrated in Airflow, containerised in Docker.
 - **Why it matters (bottom):** frames the entire deck around a *decision* and a *cost*, not a model.
 
